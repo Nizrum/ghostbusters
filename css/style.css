@@ -299,9 +299,19 @@ body {
 }
 
 .tabs-content {
-    display: flex;
+    display: none;
     align-items: center;
     flex-wrap: wrap;
+    visibility: hidden;
+}
+
+.tabs-content.visible {
+    visibility: visible;
+    display: flex;
+}
+
+.tab {
+    cursor: pointer;
 }
 
 .card {
@@ -368,6 +378,19 @@ body {
     line-height: 16px;
     color: #000000;
     margin-top: 14px;
+}
+
+.button-next {
+    display: none;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 99;
+    outline: none;
 }
 
 
@@ -557,6 +580,14 @@ body {
     .news {
         padding-top: 50px;
         padding-bottom: 70px;
+    }
+
+    .news-card {
+        max-width: 90%;
+    }
+
+    .button-next {
+        display: block;
     }
 
     .mobile-buttons {
